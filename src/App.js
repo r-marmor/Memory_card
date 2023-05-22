@@ -1,17 +1,24 @@
 import { useState } from "react";
-import Card from "./Components/Card";
+import Gameboard from "./Components/Gameboard";
+import img1 from './Images/img1.jpg';
+import img2 from './Images/img2.png';
+import img3 from './Images/img3.png';
+import img4 from './Images/img4.jpg';
+import img5 from './Images/img5.png';
+import img6 from './Images/img6.jpg';
+
 
 function App() {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [clickedCards, setClickedCards] = useState([]);
     const [cards, setCards] = useState([
-      { id: 1, img: "img1.jpg", clicked: false},
-      { id: 2, img: "img2.png", clicked: false},
-      { id: 3, img: "img3.png", clicked: false},
-      { id: 4, img: "img4.jpg", clicked: false},
-      { id: 5, img: "img5.png", clicked: false},
-      { id: 6, img: "img6.jpg", clicked: false}
+      { id: 1, img: img1, clicked: false},
+      { id: 2, img: img2, clicked: false},
+      { id: 3, img: img3, clicked: false},
+      { id: 4, img: img4, clicked: false},
+      { id: 5, img: img5, clicked: false},
+      { id: 6, img: img6, clicked: false}
     ]);
 
     const handleClick = (id) => {
@@ -38,7 +45,7 @@ function App() {
     
     return (
       <div className="App">
-        
+          <Gameboard cards={cards} onClickedCard={handleClick} />
       </div>
     );
 }

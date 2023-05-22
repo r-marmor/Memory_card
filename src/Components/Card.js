@@ -1,6 +1,6 @@
-const Card = ( { id, handleClick, img} ) => {
+const Card = ( { id, onClick, img} ) => {
     return (
-        <img onClick={() => handleClick(id)} src={require(`../Images/${img}`)} alt={`Card ${id}`} />
+        <img onClick={() => onClick(id)} src={img} alt={`Card ${id}`} />
     )
 }
 
