@@ -18,16 +18,16 @@ function App() {
     const [highScore, setHighScore] = useState(0);
     const [clickedCards, setClickedCards] = useState([]);
     const [cards, setCards] = useState([
-      { id: 1, img: img1, clicked: false},
-      { id: 2, img: img2, clicked: false},
-      { id: 3, img: img3, clicked: false},
-      { id: 4, img: img4, clicked: false},
-      { id: 5, img: img5, clicked: false},
-      { id: 6, img: img6, clicked: false},
-      { id: 7, img: img7, clicked: false},
-      { id: 8, img: img8, clicked: false},
-      { id: 9, img: img9, clicked: false},
-      { id: 10, img: img10, clicked: false}
+      { id: 1, img: img1, title: "rdmName1"},
+      { id: 2, img: img2, title: "rdmName2"},
+      { id: 3, img: img3, title: "rdmName3"},
+      { id: 4, img: img4, title: "rdmName4"},
+      { id: 5, img: img5, title: "rdmName5"},
+      { id: 6, img: img6, title: "rdmName6"},
+      { id: 7, img: img7, title: "rdmName7"},
+      { id: 8, img: img8, title: "rdmName8"},
+      { id: 9, img: img9, title: "rdmName9"},
+      { id: 10, img: img10, title: "rdmName10"}
     ]);
 
     const handleClick = (id) => {
@@ -56,7 +56,7 @@ function App() {
       <div className="App">
           <div className="scoresContainer">
             <p className="score">Score : {score}</p>
-            <p className="highScore">High score :{highScore}</p>
+            <p className="highScore">High score : {highScore}</p>
           </div>
           <Gameboard cards={cards} onClickedCard={handleClick} />
       </div>

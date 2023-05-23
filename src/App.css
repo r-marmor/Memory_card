@@ -26,23 +26,18 @@ html {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .gameboard {
     width: 75%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
     gap: 20px;
     place-self: center;
    
-  }
-
-  .gameboard img {
-    height: 250px;
-    width: 250px;
   }
 
   .scoresContainer {
@@ -54,4 +49,37 @@ html {
 
   .scoresContainer p {
       font-weight: bold;
+  }
+
+  .cardContainer {
+    height: auto;
+    border-radius: 5%;
+    text-align: center;
+  }
+
+  .cardContainer img {
+    height: auto;
+    width: 100%;
+    border-radius: 5%;
+  }
+
+  @media only screen and (min-width: 425px) {
+    .gameboard {
+      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .gameboard {
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .gameboard {
+      grid-template-columns: repeat(5, 1fr);
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
   }
